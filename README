@@ -29,7 +29,7 @@ JavaProjectRoot/
 ├── data/products.csv
 
 
-2. Compile:
+2. Compile (VERY IMPORTANT TO DO):
 javac -d bin src/org/howard/edu/lsp/assignment2/ETLPipeline.java
 
 
