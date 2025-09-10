@@ -1,0 +1,58 @@
+Assignment 1: CSV ETL Pipeline in Java
+
+Assumptions
+- Input file is always data/products.csv with a header row.
+- Output file is always data/transformed_products.csv.
+- Fields do not contain quotes or commas.
+- Malformed rows are skipped gracefully.
+- Program must be run from the project root.
+
+Design Notes
+The program follows an ETL pipeline structure:
+- Extract: Reads products.csv, skipping the header.
+- Transform:
+1. Convert product name to uppercase.
+2. Apply 10% discount if category is Electronics (rounded to 2 decimals, half-up).
+3. If discounted price > 500.00 and original category was Electronics, recategorize to Premium Electronics.
+4. Assign PriceRange (Low, Medium, High, Premium) based on final price.
+- Load: Writes output CSV with header and transformed rows.
+
+Error handling:
+- Missing input file → prints error and exits.
+- Empty file (header only) → creates header-only - output.
+- Malformed rows → skipped with warning.
+
+How to Run
+1. Project structure:
+JavaProjectRoot/
+├── src/org/howard/edu/lsp/assignment2/ETLPipeline.java
+├── data/products.csv
+
+
+2. Compile:
+javac -d bin src/org/howard/edu/lsp/assignment2/ETLPipeline.java
+
+
+3. Run:
+java -cp bin org.howard.edu.lsp.assignment2.ETLPipeline
+
+4. Output: data/transformed_products.csv
+
+AI Usage Documentation
+- Summary: Used ChatGPT for guidance on program structure, CSV I/O in Java, and rounding with BigDecimal.
+
+Prompt Example:
+What are the imports needed to load and transform a csv?
+
+AI Response Excerpt:
+Great question 👍 — in plain Java, to load and transform a CSV (no external libraries), you’ll typically need imports are: import java.io.BufferedReader; import java.io.BufferedWriter; import java.io.FileReader...
+
+
+How I Used It: I followed this advice to prepare test files. I adapted generated code to match assignment requirements and package naming.
+
+External Sources
+- Baeldung – Reading and Writing Files in Java
+ → for Files.newBufferedWriter.
+
+- StackOverflow – Rounding with BigDecimal
+ → for correct rounding logic.
