@@ -7,6 +7,15 @@ public class Main {
     //  then run  javac org/howard/edu/lsp/midterm/question2/*.java
     //  then run  java org.howard.edu.lsp.midterm.question2.Main
 
+    /*
+    * Yes, the methods in AreaCalculator are an example of method overloading.
+    * Each area() method has the same name but uses different parameter types and counts 
+    * (double radius, double width & height, int base & height, int side).
+    * This allows one method name to handle multiple shapes instead of creating separate methods 
+    * like circleArea() or rectangleArea(), making the code cleaner and more consistent.
+    */
+
+
     public static void main(String[] args) {
         // Correct calls
         System.out.println("Circle radius 3.0 → area = " + AreaCalculator.area(3.0));
