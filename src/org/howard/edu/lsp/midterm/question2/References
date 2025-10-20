@@ -1,0 +1,14 @@
+References – Question 2: AreaCalculator Package
+
+AI Source:
+ChatGPT (GPT-5), OpenAI. Conversation on October 20, 2025.
+Assisted in generating method stubs, verifying formula accuracy for geometric areas, 
+and demonstrating correct Java exception handling for invalid input values.
+
+All formulas (area of circle, rectangle, triangle, square) are based on standard geometry principles.
+
+Prompts:
+
+“Write a Java class called AreaCalculator with overloaded methods to calculate the area of a circle, rectangle, triangle, and square. Each method should throw an IllegalArgumentException if any input is less than or equal to zero.”
+
+“Show me how to implement overloaded methods in Java that calculate different shapes’ areas using the same method name but different parameter types.”

@@ -1,0 +1,22 @@
+References – Question 4: Smart-Campus Device System Package
+
+AI Source:
+ChatGPT (GPT-5), OpenAI. Conversation on October 20, 2025.
+Used for clarifying inheritance and interface implementation structure,
+verifying polymorphism examples, and ensuring accurate syntax for method overriding 
+and access modifiers. 
+
+Concepts based on Java OOP principles taught in class.
+
+Prompts:
+
+“Help me design a smart-campus device system in Java with inheritance and interfaces.
+The base abstract class should be Device, and subclasses should be DoorLock, Thermostat, and Camera.
+Include interfaces Networked and BatteryPowered.”
+
+“Show how to correctly extend an abstract class in Java and 
+implement multiple interfaces with methods like connect(), disconnect(), and getStatus().”
+
+“I need all my classes (Device, DoorLock, Thermostat, Camera) to compile and work with a provided Main.java file.
+Can you show me how to structure the packages and method overrides correctly?”
+
