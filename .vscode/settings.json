@@ -1,0 +1,5 @@
+{
+  "java.project.excludedPaths": [
+    "src/org/howard/edu/lsp/assignment1"
+  ]
+}
