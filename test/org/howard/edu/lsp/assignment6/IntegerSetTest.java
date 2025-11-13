@@ -4,6 +4,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+
+/**
+ * How to run this test:
+ * 
+ * 1. Compile the source files:
+ *    javac -d . src\org\howard\edu\lsp\assignment6\IntegerSet.java
+ * 
+ * 2. Compile the test files (with JUnit on classpath):
+ *    javac -cp ".;lib\junit-platform-console-standalone-1.9.3.jar" -d . test\org\howard\edu\lsp\assignment6\IntegerSetTest.java
+ * 
+ * 3. Run the tests:
+ *    java -jar lib\junit-platform-console-standalone-1.9.3.jar --class-path . --select-class org.howard.edu.lsp.assignment6.IntegerSetTest
+ * 
+ * Note: Run these commands from the project root directory.
+ */
+
+
 /**
  * JUnit tests for IntegerSet.
  */
