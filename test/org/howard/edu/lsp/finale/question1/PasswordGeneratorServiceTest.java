@@ -31,25 +31,18 @@ public class PasswordGeneratorServiceTest {
 
     @Test
     public void checkInstanceNotNull() {
-        // TODO: verify that 'service' is not null
         assertNotNull(service, "Service instance should not be null");
     }
 
     @Test
     public void checkSingleInstanceBehavior() {
         PasswordGeneratorService second = PasswordGeneratorService.getInstance();
-        // TODO: Verify that both 'service' (created in @BeforeEach) 
-        // and 'second' refer to the EXACT same object in memory. This 
-        // test must confirm true singleton behavior — not just that the 
-        // two objects are equal, but they are the *same 
-        // instance* returned by getInstance().
         assertSame(service, second, "Both instances should refer to the exact same object (singleton behavior)");
     }
 
     @Test
     public void generateWithoutSettingAlgorithmThrowsException() {
         PasswordGeneratorService s = PasswordGeneratorService.getInstance();
-        // TODO: verify correct exception behavior for each algorithm
         assertThrows(IllegalStateException.class, () -> {
             s.generatePassword(10);
         }, "Should throw IllegalStateException when generatePassword is called before setAlgorithm");
@@ -59,7 +52,6 @@ public class PasswordGeneratorServiceTest {
     public void basicAlgorithmGeneratesCorrectLengthAndDigitsOnly() {
         service.setAlgorithm("basic");
         String p = service.generatePassword(10);
-        // TODO: verify required behavior
         assertNotNull(p, "Password should not be null");
         assertEquals(10, p.length(), "Password should have the correct length");
         assertTrue(p.matches("[0-9]+"), "Password should contain only digits (0-9)");
@@ -69,7 +61,6 @@ public class PasswordGeneratorServiceTest {
     public void enhancedAlgorithmGeneratesCorrectCharactersAndLength() {
         service.setAlgorithm("enhanced");
         String p = service.generatePassword(12);
-        // TODO: verify required behavior
         assertNotNull(p, "Password should not be null");
         assertEquals(12, p.length(), "Password should have the correct length");
         assertTrue(p.matches("[A-Za-z0-9]+"), "Password should contain only A-Z, a-z, and 0-9");
@@ -79,7 +70,6 @@ public class PasswordGeneratorServiceTest {
     public void lettersAlgorithmGeneratesLettersOnly() {
         service.setAlgorithm("letters");
         String p = service.generatePassword(8);
-        // TODO: verify required behavior
         assertNotNull(p, "Password should not be null");
         assertEquals(8, p.length(), "Password should have the correct length");
         assertTrue(p.matches("[A-Za-z]+"), "Password should contain only letters (A-Z, a-z)");
@@ -96,7 +86,6 @@ public class PasswordGeneratorServiceTest {
         service.setAlgorithm("enhanced");
         String p3 = service.generatePassword(10);
 
-        // TODO: verify correct behavior characteristics of each algorithm
         // Verify basic algorithm produces digits only
         assertTrue(p1.matches("[0-9]+"), "Basic algorithm should produce digits only");
         assertEquals(10, p1.length(), "Basic password should have correct length");
